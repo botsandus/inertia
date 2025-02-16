@@ -1,5 +1,5 @@
 {
-  "name": "@inertiajs/core",
+  "name": "@dexory/inertiajs-core",
   "version": "2.0.3",
   "license": "MIT",
   "description": "A framework for creating server-driven single page apps.",

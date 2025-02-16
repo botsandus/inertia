@@ -1,4 +1,3 @@
-import debounce from './debounce'
 import { fireNavigateEvent } from './events'
 import { history } from './history'
 import { page as currentPage } from './page'
@@ -13,13 +12,14 @@ class EventHandler {
   }[] = []
 
   public init() {
+    console.log('Using dexory forked inertia')
     if (typeof window !== 'undefined') {
       window.addEventListener('popstate', this.handlePopstateEvent.bind(this))
-      window.addEventListener('scroll', debounce(Scroll.onWindowScroll.bind(Scroll), 100), true)
+      // window.addEventListener('scroll', debounce(Scroll.onWindowScroll.bind(Scroll), 100), true)
     }
 
     if (typeof document !== 'undefined') {
-      document.addEventListener('scroll', debounce(Scroll.onScroll.bind(Scroll), 100), true)
+      // document.addEventListener('scroll', debounce(Scroll.onScroll.bind(Scroll), 100), true)
     }
   }
 
